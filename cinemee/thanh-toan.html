@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineMê - Thanh toán</title>
+    <link rel="stylesheet" href="thanh-toan.css" />
+  </head>
+
+  <body class="trangThanhToan">
+    <header class="dauTrang">
+      <div class="khungTrang noiDungDauTrang">
+        <a class="thuongHieu" href="Home.html">
+          <img
+            class="anhBieuTuong"
+            src="img/logoCineMe.jpg"
+            alt="Logo CineMê"
+          />
+        </a>
+
+        <nav class="thanhDieuHuong" aria-label="Điều hướng chính">
+          <ul class="danhSachDieuHuong">
+            <li><a class="lienKetDieuHuong" href="Home.html">Trang chủ</a></li>
+            <li>
+              <a class="lienKetDieuHuong" href="lich-chieu.html">
+                Lịch chiếu
+              </a>
+            </li>
+            <li>
+              <a class="lienKetDieuHuong" href="index.html#khuVucDatGhe">
+                Đặt vé
+              </a>
+            </li>
+            <li>
+              <a
+                class="lienKetDieuHuong dangHoatDong"
+                href="thanh-toan.html"
+                aria-current="page"
+              >
+                Thanh toán
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="noiDungChinhThanhToan">
+      <section class="khuVucThanhToan">
+        <div class="khungTrang">
+          <div class="tieuDeTrangThanhToan">
+            <p class="nhanTrang">Hoàn tất đặt vé</p>
+            <h1>Thanh toán vé xem phim</h1>
+            <p>
+              Vui lòng kiểm tra thông tin vé và nhập thông tin người nhận trước
+              khi xác nhận thanh toán.
+            </p>
+          </div>
+
+          <div class="thanhTienTrinh" aria-label="Tiến trình đặt vé">
+            <div class="buocTienTrinh daHoanThanh">
+              <span>1</span>
+              <strong>Chọn suất chiếu</strong>
+            </div>
+            <div class="duongTienTrinh daHoanThanh"></div>
+            <div class="buocTienTrinh daHoanThanh">
+              <span>2</span>
+              <strong>Chọn ghế</strong>
+            </div>
+            <div class="duongTienTrinh daHoanThanh"></div>
+            <div class="buocTienTrinh dangThucHien">
+              <span>3</span>
+              <strong>Thanh toán</strong>
+            </div>
+          </div>
+
+          <!-- Sau này đổi action thành file PHP xử lý thật -->
+          <form class="boCucThanhToan" action="#" method="post">
+            <div class="cotNhapThongTin">
+              <section class="theThanhToan">
+                <div class="tieuDeThe">
+                  <span class="soThuTu">1</span>
+                  <div>
+                    <h2>Thông tin khách hàng</h2>
+                    <p>Thông tin dùng để gửi vé điện tử và liên hệ khi cần.</p>
+                  </div>
+                </div>
+
+                <div class="luoiBieuMau">
+                  <div class="nhomNhapLieu rongHaiCot">
+                    <label for="hoTen">Họ và tên</label>
+                    <input
+                      type="text"
+                      id="hoTen"
+                      name="ho_ten"
+                      placeholder="Nhập họ và tên"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+
+                  <div class="nhomNhapLieu">
+                    <label for="soDienThoai">Số điện thoại</label>
+                    <input
+                      type="tel"
+                      id="soDienThoai"
+                      name="so_dien_thoai"
+                      placeholder="Ví dụ: 0901 234 567"
+                      autocomplete="tel"
+                      required
+                    />
+                  </div>
+
+                  <div class="nhomNhapLieu">
+                    <label for="email">Email nhận vé</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="vidu@email.com"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+
+                  <div class="nhomNhapLieu rongHaiCot">
+                    <label for="ghiChu">Ghi chú</label>
+                    <textarea
+                      id="ghiChu"
+                      name="ghi_chu"
+                      rows="4"
+                      placeholder="Nhập yêu cầu khác nếu có"
+                    ></textarea>
+                  </div>
+                </div>
+              </section>
+
+              <section class="theThanhToan">
+                <div class="tieuDeThe">
+                  <span class="soThuTu">2</span>
+                  <div>
+                    <h2>Phương thức thanh toán</h2>
+                    <p>Chọn một phương thức phù hợp với bạn.</p>
+                  </div>
+                </div>
+
+                <div class="danhSachPhuongThuc">
+                  <div class="luaChonThanhToan">
+                    <input
+                      type="radio"
+                      id="thanhToanTaiQuay"
+                      name="phuong_thuc_thanh_toan"
+                      value="tai_quay"
+                      checked
+                    />
+                    <label for="thanhToanTaiQuay">
+                      <span class="bieuTuongThanhToan">₫</span>
+                      <span>
+                        <strong>Thanh toán tại quầy</strong>
+                        <small
+                          >Giữ chỗ tạm thời và thanh toán khi đến rạp.</small
+                        >
+                      </span>
+                      <span class="dauChon"></span>
+                    </label>
+                  </div>
+
+                  <div class="luaChonThanhToan">
+                    <input
+                      type="radio"
+                      id="chuyenKhoan"
+                      name="phuong_thuc_thanh_toan"
+                      value="chuyen_khoan"
+                    />
+                    <label for="chuyenKhoan">
+                      <span class="bieuTuongThanhToan">QR</span>
+                      <span>
+                        <strong>Chuyển khoản ngân hàng</strong>
+                        <small>
+                          Quét mã QR hoặc chuyển khoản theo thông tin đơn hàng.
+                        </small>
+                      </span>
+                      <span class="dauChon"></span>
+                    </label>
+                  </div>
+
+                  <div class="luaChonThanhToan">
+                    <input
+                      type="radio"
+                      id="viDienTu"
+                      name="phuong_thuc_thanh_toan"
+                      value="vi_dien_tu"
+                    />
+                    <label for="viDienTu">
+                      <span class="bieuTuongThanhToan">M</span>
+                      <span>
+                        <strong>Ví điện tử</strong>
+                        <small>
+                          Giao diện chờ tích hợp MoMo hoặc cổng thanh toán khác.
+                        </small>
+                      </span>
+                      <span class="dauChon"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="ghiChuThanhToan">
+                  <strong>Lưu ý:</strong>
+                  Đây là giao diện HTML/CSS. Việc tạo mã giao dịch, xác nhận
+                  tiền và cập nhật trạng thái đơn sẽ được xử lý bằng PHP và
+                  MySQL sau.
+                </div>
+              </section>
+
+              <section class="theThanhToan">
+                <div class="tieuDeThe">
+                  <span class="soThuTu">3</span>
+                  <div>
+                    <h2>Xác nhận thông tin</h2>
+                    <p>Kiểm tra lại trước khi gửi yêu cầu thanh toán.</p>
+                  </div>
+                </div>
+
+                <label class="dongDongY">
+                  <input
+                    type="checkbox"
+                    name="dong_y_dieu_khoan"
+                    value="1"
+                    required
+                  />
+                  <span>
+                    Tôi xác nhận thông tin đặt vé là chính xác và đồng ý với
+                    điều khoản sử dụng của CineMê.
+                  </span>
+                </label>
+              </section>
+            </div>
+
+            <aside class="cotTomTat">
+              <div class="hopTomTat">
+                <div class="tieuDeTomTat">
+                  <h2>Thông tin vé</h2>
+                  <a href="index.html#khuVucDatGhe">Chỉnh sửa</a>
+                </div>
+
+                <div class="thongTinPhim">
+                  <img
+                    src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/s/p/spiderman.jpg"
+                    alt="Poster Người Nhện: Khởi đầu mới"
+                  />
+
+                  <div>
+                    <span class="nhanDoTuoi">13+</span>
+                    <h3>NGƯỜI NHỆN: KHỞI ĐẦU MỚI</h3>
+                    <p>2D · Phụ đề</p>
+                  </div>
+                </div>
+
+                <!-- Dữ liệu mẫu, sau này thay bằng PHP/MySQL -->
+                <dl class="chiTietDonHang">
+                  <div>
+                    <dt>Rạp</dt>
+                    <dd>CineMê Ninh Kiều</dd>
+                  </div>
+                  <div>
+                    <dt>Ngày chiếu</dt>
+                    <dd>31/07/2026</dd>
+                  </div>
+                  <div>
+                    <dt>Giờ chiếu</dt>
+                    <dd>18:45</dd>
+                  </div>
+                  <div>
+                    <dt>Phòng</dt>
+                    <dd>Phòng 04</dd>
+                  </div>
+                  <div>
+                    <dt>Ghế</dt>
+                    <dd>F5, F6</dd>
+                  </div>
+                </dl>
+
+                <div class="duongPhanCach"></div>
+
+                <div class="dongTien">
+                  <span>2 vé</span>
+                  <strong>240.000đ</strong>
+                </div>
+
+                <div class="dongTien">
+                  <span>Phí dịch vụ</span>
+                  <strong>0đ</strong>
+                </div>
+
+                <div class="tongThanhToan">
+                  <span>Tổng thanh toán</span>
+                  <strong>240.000đ</strong>
+                </div>
+
+                <input type="hidden" name="ma_suat_chieu" value="4" />
+                <input type="hidden" name="danh_sach_ghe" value="F5,F6" />
+                <input type="hidden" name="tong_tien" value="240000" />
+
+                <button class="nutXacNhanThanhToan" type="submit">
+                  Xác nhận thanh toán
+                </button>
+
+                <a class="nutQuayLai" href="index.html#khuVucDatGhe">
+                  ← Quay lại chọn ghế
+                </a>
+
+                <p class="baoMatThanhToan">
+                  Thông tin của bạn chỉ được sử dụng để xử lý đơn đặt vé.
+                </p>
+              </div>
+            </aside>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="chanTrang" id="chanTrang">
+      <div class="khungTrang luoiChanTrang">
+        <div class="cotChanTrang">
+          <img
+            class="anhBieuTuongChanTrang"
+            src="img/logoCineMe.jpg"
+            alt="Logo CineMê"
+          />
+          <p>
+            CineMê mang đến trải nghiệm đặt vé xem phim đơn giản, nhanh chóng và
+            thuận tiện.
+          </p>
+        </div>
+
+        <div class="cotChanTrang">
+          <h3>Chi nhánh Cần Thơ</h3>
+          <ul class="danhSachChanTrang">
+            <li>Chi nhánh Ninh Kiều</li>
+            <li>Chi nhánh Bình Thủy</li>
+            <li>Chi nhánh An Thới</li>
+          </ul>
+        </div>
+
+        <div class="cotChanTrang">
+          <h3>Liên hệ</h3>
+          <ul class="danhSachChanTrang">
+            <li>Điện thoại: 0292 123 4567</li>
+            <li>Email: hotro@cineme.vn</li>
+            <li>Thời gian: 8:00 - 22:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="banQuyen">
+        <p>&copy; 2026 CineMê. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </footer>
+  </body>
+</html>

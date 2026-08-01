@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lịch chiếu phim | CineMê</title>
+    <link rel="stylesheet" href="css/styles(3).css" />
+    <script src="js/lichChieu.js" defer></script>
+    <!-- <link rel="stylesheet" href="css/lich-chieu.css" /> -->
+  </head>
+  <body class="trangLichChieu">
+    <!-- ==================== HEADER ==================== -->
+    <header class="dauTrang">
+      <div class="khungTrang noiDungDauTrang">
+        <a class="thuongHieu" href="index.html">
+          <img
+            class="anhBieuTuong"
+            src="img/logoCineMe.jpg"
+            alt="Logo CineMê"
+          />
+        </a>
+
+        <nav class="thanhDieuHuong" aria-label="Điều hướng chính">
+          <ul class="danhSachDieuHuong">
+            <li><a class="lienKetDieuHuong" href="Home.html">Trang chủ</a></li>
+
+            <li>
+              <a
+                class="lienKetDieuHuong dangHoatDong"
+                href="lich-chieu.html"
+                aria-current="page"
+                >Lịch chiếu
+              </a>
+            </li>
+            <li>
+              <a class="lienKetDieuHuong" href="index.html#khuVucDatGhe"
+                >Đặt vé</a
+              >
+            </li>
+
+            <li><a class="lienKetDieuHuong" href="#chanTrang">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="main">
+        <!-- Date strip -->
+        <div class="date-strip">
+          <div class="month-box">
+            <div class="num">8</div>
+            <div class="ym">2026 · Tháng 8</div>
+          </div>
+          <button class="date-nav">‹</button>
+          <div class="date-scroll" id="dateScroll">
+            <div class="date-item today" data-ngay="2026-07-31">
+              <div class="dow">Thứ Sáu</div>
+              <div class="dnum">31</div>
+            </div>
+            <div class="date-item sun" data-ngay="2026-08-01">
+              <div class="dow">CN</div>
+              <div class="dnum">1</div>
+            </div>
+            <div class="date-item" data-ngay="2026-08-02">
+              <div class="dow">Hai</div>
+              <div class="dnum">2</div>
+            </div>
+            <div class="date-item" data-ngay="2026-08-03">
+              <div class="dow">Ba</div>
+              <div class="dnum">3</div>
+            </div>
+            <div class="date-item" data-ngay="2026-08-04">
+              <div class="dow">Tư</div>
+              <div class="dnum">4</div>
+            </div>
+            <div class="date-item" data-ngay="2026-08-05">
+              <div class="dow">Năm</div>
+              <div class="dnum">5</div>
+            </div>
+            <div class="date-item" data-ngay="2026-08-06">
+              <div class="dow">Sáu</div>
+              <div class="dnum">6</div>
+            </div>
+          </div>
+          <button class="date-nav">›</button>
+        </div>
+
+        <!-- Legend -->
+        <div class="legend">
+          <div><span class="badge b-p">P</span>Mọi đối tượng</div>
+          <div><span class="badge b-13">13</span>13 tuổi trở lên</div>
+          <div><span class="badge b-16">16</span>16 tuổi trở lên</div>
+          <div><span class="badge b-18">18</span>18 tuổi trở lên</div>
+        </div>
+
+        <div id="danhSachPhim"></div>
+      </div>
+    </div>
+    <!-- /.content -->
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="chanTrang" id="chanTrang">
+      <div class="khungTrang luoiChanTrang">
+        <div class="cotChanTrang">
+          <img
+            class="anhBieuTuongChanTrang"
+            src="anhBieuTuong.jpg"
+            alt="Logo CineMê"
+          />
+          <p>
+            CineMê mang đến trải nghiệm đặt vé xem phim đơn giản, nhanh chóng và
+            thuận tiện.
+          </p>
+        </div>
+
+        <div class="cotChanTrang">
+          <h3>Chi nhánh Cần Thơ</h3>
+          <ul class="danhSachChanTrang">
+            <li>Chi nhánh Ninh Kiều</li>
+            <li>Chi nhánh Bình Thủy</li>
+            <li>Chi nhánh An Thới</li>
+          </ul>
+        </div>
+
+        <div class="cotChanTrang">
+          <h3>Liên hệ</h3>
+          <ul class="danhSachChanTrang">
+            <li>Điện thoại: 0292 123 4567</li>
+            <li>Email: hotro@cineme.vn</li>
+            <li>Thời gian: 8:00 - 22:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="banQuyen">
+        <p>
+          &copy; <span id="namHienTai"></span> CineMê. Tất cả quyền được bảo
+          lưu.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CineMê - Đặt vé xem phim</title>
+
+    <link rel="stylesheet" href="css/styles(3).css" />
+
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ==================== HEADER ==================== -->
+
+    <header class="dauTrang">
+      <div class="khungTrang noiDungDauTrang">
+        <!-- Logo -->
+        <a class="thuongHieu" href="index.html">
+          <img
+            class="anhBieuTuong"
+            src="img/logoCineMe.jpg"
+            alt="Logo CineMê"
+          />
+        </a>
+
+        <!-- Thanh điều hướng -->
+        <nav class="thanhDieuHuong">
+          <ul class="danhSachDieuHuong">
+            <li>
+              <a class="lienKetDieuHuong" href="Home.html"> Trang chủ </a>
+            </li>
+
+            <li>
+              <a class="lienKetDieuHuong" href="lich-chieu.html">
+                Lịch chiếu
+              </a>
+            </li>
+
+            <li>
+              <a class="lienKetDieuHuong dangHoatDong" href="#khuVucDatGhe">
+                Đặt vé
+              </a>
+            </li>
+
+            <li>
+              <a class="lienKetDieuHuong" href="#chanTrang"> Liên hệ </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Nút đặt vé -->
+      </div>
+    </header>
+
+    <main class="noiDungChinh">
+      <section
+        class="khuVucDatGhe"
+        id="khuVucDatGhe"
+        aria-labelledby="tieuDeDatGhe"
+      >
+        <div class="khungTrang">
+          <div class="tieuDeKhuVuc">
+            <p class="nhanKhuVuc">Đặt vé xem phim</p>
+            <h2>Chọn vị trí phù hợp với bạn</h2>
+          </div>
+
+          <div class="boCucDatVe">
+            <!-- Phần chọn ghế -->
+            <div class="cotChonGhe">
+              <div class="khoiLuaChon">
+                <h3>1. Chọn thành phố</h3>
+                <div class="danhSachThanhPho" id="danhSachThanhPho"></div>
+              </div>
+              <div class="khoiLuaChon">
+                <h3>2. Chọn chi nhánh</h3>
+                <div class="danhSachChiNhanh" id="danhSachChiNhanh">
+                  <p class="thongBao">Vui lòng chọn nơi bạn ở</p>
+                  <!-- js -->
+                </div>
+              </div>
+              <div class="khoiLuaChon">
+                <h3>3. Chọn phòng chiếu</h3>
+                <div class="danhSachPhongChieu" id="danhSachPhongChieu">
+                  <p class="thongBao">Vui lòng chọn chi nhánh trước.</p>
+                </div>
+              </div>
+              <!-- sơ đồ ghế -->
+              <div class="khoiSoDoGhe">
+                <h3>4. Chọn ghế</h3>
+
+                <div class="manHinhChieu">Màn Hình</div>
+
+                <div class="soDoGhe" id="soDoGhe">
+                  <p class="thongBao">Vui lòng chọn phòng chiếu</p>
+                </div>
+                <div class="chu-thich-ghe">
+                  <div class="muc-chu-thich">
+                    <span class="mau-ghe ghe-thuong"></span>
+                    <span>Ghế thường</span>
+                  </div>
+
+                  <div class="muc-chu-thich">
+                    <span class="mau-ghe ghe-vip"></span>
+                    <span>Ghế VIP</span>
+                  </div>
+
+                  <div class="muc-chu-thich">
+                    <span class="mau-ghe ghe-doi"></span>
+                    <span>Ghế đôi</span>
+                  </div>
+
+                  <div class="muc-chu-thich">
+                    <span class="mau-ghe ghe-da-dat"></span>
+                    <span>Ghế đã đặt</span>
+                  </div>
+
+                  <div class="muc-chu-thich">
+                    <span class="mau-ghe ghe-dang-chon"></span>
+                    <span>Ghế đang chọn</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Phần bên phải -->
+            <aside class="cotThanhToan">
+              <div class="hopThanhToan">
+                <h3>Thông tin đặt vé</h3>
+                <div class="dongThongTin">
+                  <span>Thành phố</span>
+                  <strong id="tenThanhPhoDaChon">Chưa chọn</strong>
+                </div>
+                <div class="dongThongTin">
+                  <span>Chi Nhánh</span>
+                  <strong id="tenChiNhanhDaChon">Chưa chọn</strong>
+                </div>
+                <div class="dongThongTin">
+                  <span>Phòng Chiếu</span>
+                  <strong id="tenPhongDaChon">Chưa chọn</strong>
+                </div>
+                <div class="dongThongTin">
+                  <span>Giá vé</span>
+                  <strong id="giaVeDaChon">Chưa chọn</strong>
+                </div>
+                <div class="dongThongTin">
+                  <span>Ghế đã chọn</span>
+                  <strong id="danhSachGheDaChon">Chưa có</strong>
+                </div>
+                <div class="dongThongTin">
+                  <span>Số lượng vé</span>
+                  <strong id="soLuongVe">0</strong>
+                </div>
+                <div class="dongTongTien">
+                  <span>Tổng tiền</span>
+                  <strong id="tongTien">0đ</strong>
+                </div>
+
+                <button
+                  class="nutThanhToan"
+                  id="nutThanhToan"
+                  type="button"
+                  disabled
+                >
+                  Thanh Toán
+                </button>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer class="chanTrang" id="chanTrang">
+      <div class="khungTrang luoiChanTrang">
+        <div class="cotChanTrang">
+          <img
+            class="anhBieuTuongChanTrang"
+            src="img/logoCineMe.jpg"
+            alt="Logo CineMê"
+          />
+
+          <p>
+            CineMê mang đến trải nghiệm đặt vé xem phim đơn giản, nhanh chóng và
+            thuận tiện.
+          </p>
+        </div>
+
+        <div class="cotChanTrang">
+          <h3>Liên hệ</h3>
+
+          <ul class="danhSachChanTrang">
+            <li>Điện thoại: 0292 123 4567</li>
+            <li>Email: hotro@cineme.vn</li>
+            <li>Thời gian: 8:00 - 22:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="banQuyen">
+        <p>
+          &copy;
+          <span id="namHienTai"></span>
+          CineMê. Tất cả quyền được bảo lưu.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

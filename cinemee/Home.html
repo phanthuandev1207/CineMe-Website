@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt Vé Xem Phim - Alpha (CineMê Style)</title>
+    <link rel="stylesheet" href="css/styles(3).css" />
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="dauTrang">
+      <div class="khungTrang noiDungDauTrang">
+        <a class="thuongHieu" href="Home.html">
+          <img
+            class="anhBieuTuong"
+            src="img/logoCineMe.jpg"
+            alt="Logo CineMê"
+          />
+        </a>
+
+        <nav class="thanhDieuHuong" aria-label="Điều hướng chính">
+          <ul class="danhSachDieuHuong">
+            <li>
+              <a
+                class="lienKetDieuHuong dangHoatDong"
+                href="Home.html"
+                aria-current="page"
+                >Trang chủ</a
+              >
+            </li>
+            <li>
+              <a class="lienKetDieuHuong" href="lich-chieu.html">Lịch chiếu</a>
+            </li>
+            <li>
+              <a class="lienKetDieuHuong" href="index.html#khuVucDatGhe"
+                >Đặt vé</a
+              >
+            </li>
+            <li><a class="lienKetDieuHuong" href="#chanTrang">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ================= HERO SLIDER (như CGV / Lotte Cinema) ================= -->
+    <section class="heroSlider" id="heroSlider">
+      <div class="heroSlider__track" id="heroSlider__track">
+        <div class="heroSlide">
+          <img
+            src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/s/p/spiderman.jpg"
+            alt="NGƯỜI NHỆN: KHỞI ĐẦU MỚI"
+            class="heroSlide__img"
+          />
+          <div class="heroSlide__caption">
+            <h3>NGƯỜI NHỆN: KHỞI ĐẦU MỚI</h3>
+            <a class="btn-book" href="lich-chieu.html?phim=1"> MUA VÉ NGAY </a>
+          </div>
+        </div>
+        <div class="heroSlide">
+          <img
+            src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/p/o/poster_conan_movie_29.jpg"
+            alt="THÁM TỬ LỪNG DANH CONAN"
+            class="heroSlide__img"
+          />
+          <div class="heroSlide__caption">
+            <h3>THÁM TỬ LỪNG DANH CONAN: THIÊN THẦN SA NGÃ TRÊN XA LỘ</h3>
+            <a class="btn-book" href="lich-chieu.html?phim=2"> MUA VÉ NGAY </a>
+          </div>
+        </div>
+        <div class="heroSlide">
+          <img
+            src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/o/d/ody_horseposter_470x700.jpg"
+            alt="THE ODYSSEY"
+            class="heroSlide__img"
+          />
+          <div class="heroSlide__caption">
+            <h3>THE ODYSSEY</h3>
+            <a class="btn-book" href="lich-chieu.html?phim=3"> MUA VÉ NGAY </a>
+          </div>
+        </div>
+        <div class="heroSlide">
+          <img
+            src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2024/05/despicable-me-4-poster.JPG"
+            alt="DESPICABLE ME 4"
+            class="heroSlide__img"
+          />
+          <div class="heroSlide__caption">
+            <h3>DESPICABLE ME 4</h3>
+            <button class="btn-trailer">XEM TRAILER</button>
+          </div>
+        </div>
+        <div class="heroSlide">
+          <img
+            src="https://www.eyeforfilm.co.uk/images/stills/d/deadpool_wolverine_2024_poster.jpg"
+            alt="DEADPOOL & WOLVERINE"
+            class="heroSlide__img"
+          />
+          <div class="heroSlide__caption">
+            <h3>DEADPOOL & WOLVERINE</h3>
+            <button class="btn-trailer">XEM TRAILER</button>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="heroSlider__arrow heroSlider__arrow--prev"
+        id="heroPrev"
+        aria-label="Trước"
+      >
+        &#10094;
+      </button>
+      <button
+        class="heroSlider__arrow heroSlider__arrow--next"
+        id="heroNext"
+        aria-label="Sau"
+      >
+        &#10095;
+      </button>
+
+      <div class="heroSlider__dots" id="heroDots"></div>
+    </section>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="container">
+      <!-- PHẦN 1: MOVIE SELECTION -->
+      <section class="movie-section" id="khuVucDatGhe">
+        <div class="section-header">
+          <h2 class="section-title">Movie Selection</h2>
+        </div>
+        <div class="movie-grid">
+          <div class="movie-card">
+            <div class="poster-wrapper">
+              <span class="age-badge badge-t13">13</span>
+              <img
+                src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/s/p/spiderman.jpg"
+                alt="NGƯỜI NHỆN: KHỞI ĐẦU MỚI"
+                class="movie-poster"
+              />
+              <div class="poster-overlay">
+                <a href="lich-chieu.html?phim=1" class="btn-book">MUA VÉ</a>
+              </div>
+            </div>
+            <h3 class="movie-name">NGƯỜI NHỆN: KHỞI ĐẦU MỚI</h3>
+          </div>
+          <div class="movie-card">
+            <div class="poster-wrapper">
+              <span class="age-badge badge-t13">13</span>
+              <img
+                src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/p/o/poster_conan_movie_29.jpg"
+                alt="PHIM ĐIỆN ẢNH THÁM TỬ LỪNG DANH CONAN: THIÊN THẦN SA NGÃ TRÊN XA LỘ"
+                class="movie-poster"
+              />
+              <div class="poster-overlay">
+                <a href="lich-chieu.html?phim=2" class="btn-book">MUA VÉ</a>
+              </div>
+            </div>
+            <h3 class="movie-name">
+              PHIM ĐIỆN ẢNH THÁM TỬ LỪNG DANH CONAN: THIÊN THẦN SA NGÃ TRÊN XA
+              LỘ
+            </h3>
+          </div>
+          <div class="movie-card">
+            <div class="poster-wrapper">
+              <span class="age-badge badge-t16">16</span>
+              <img
+                src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/o/d/ody_horseposter_470x700.jpg"
+                alt="THE ODYSSEY"
+                class="movie-poster"
+              />
+              <div class="poster-overlay">
+                <a href="lich-chieu.html?phim=3" class="btn-book">MUA VÉ</a>
+              </div>
+            </div>
+            <h3 class="movie-name">THE ODYSSEY</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHẦN 2: PHIM HOT -->
+      <section class="movie-section">
+        <div class="section-header">
+          <h2 class="section-title">Phim Hot</h2>
+        </div>
+        <div class="movie-grid">
+          <div class="movie-card">
+            <div class="poster-wrapper">
+              <span class="age-badge badge-t13">13</span>
+              <img
+                src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/s/p/spiderman.jpg"
+                alt="NGƯỜI NHỆN: KHỞI ĐẦU MỚI"
+                class="movie-poster"
+              />
+              <div class="poster-overlay">
+                <a class="btn-book" href="lich-chieu.html?phim=1">MUA VÉ</a>
+              </div>
+            </div>
+            <h3 class="movie-name">NGƯỜI NHỆN: KHỞI ĐẦU MỚI</h3>
+          </div>
+          <div class="movie-card">
+            <div class="poster-wrapper">
+              <span class="age-badge badge-t13">13</span>
+              <img
+                src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/p/o/poster_conan_movie_29.jpg"
+                alt="PHIM ĐIỆN ẢNH THÁM TỬ LỪNG DANH CONAN: THIÊN THẦN SA NGÃ TRÊN XA LỘ"
+                class="movie-poster"
+              />
+              <div class="poster-overlay">
+                <a class="btn-book" href="lich-chieu.html?phim=2">MUA VÉ</a>
+              </div>
+            </div>
+            <h3 class="movie-name">
+              PHIM ĐIỆN ẢNH THÁM TỬ LỪNG DANH CONAN: THIÊN THẦN SA NGÃ TRÊN XA
+              LỘ
+            </h3>
+          </div>
+          <div class="movie-card">
+            <div class="poster-wrapper">
+              <span class="age-badge badge-t16">16</span>
+              <img
+                src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/image/c5f0a1eff4c394a251036189ccddaacd/o/d/ody_horseposter_470x700.jpg"
+                alt="THE ODYSSEY"
+                class="movie-poster"
+              />
+              <div class="poster-overlay">
+                <a class="btn-book" href="lich-chieu.html?phim=3">MUA VÉ</a>
+              </div>
+            </div>
+            <h3 class="movie-name">THE ODYSSEY</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHẦN 3: PHIM SẮP CHIẾU -->
+      <section class="movie-section">
+        <div class="section-header">
+          <h2 class="section-title">Phim Sắp Chiếu</h2>
+        </div>
+        <div class="movie-grid">
+          <div class="movie-card">
+            <div class="poster-wrapper">
+              <span class="age-badge badge-p">P</span>
+              <img
+                src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2024/05/despicable-me-4-poster.JPG"
+                alt="Phim"
+                class="movie-poster"
+              />
+              <div class="poster-overlay">
+                <button class="btn-trailer">XEM TRAILER</button>
+              </div>
+            </div>
+            <h3 class="movie-name">DESPICABLE ME 4</h3>
+          </div>
+          <div class="movie-card">
+            <div class="poster-wrapper">
+              <span class="age-badge badge-t13">13</span>
+              <img
+                src="https://image.tmdb.org/t/p/original/xkt4YBiFxpTRijrdXWtksHgRlnH.jpg"
+                alt="Phim"
+                class="movie-poster"
+              />
+              <div class="poster-overlay">
+                <button class="btn-trailer">XEM TRAILER</button>
+              </div>
+            </div>
+            <h3 class="movie-name">INSIDE OUT 2</h3>
+          </div>
+          <div class="movie-card">
+            <div class="poster-wrapper">
+              <span class="age-badge badge-t16">16</span>
+              <img
+                src="https://www.eyeforfilm.co.uk/images/stills/d/deadpool_wolverine_2024_poster.jpg"
+                alt="Phim"
+                class="movie-poster"
+              />
+              <div class="poster-overlay">
+                <button class="btn-trailer">XEM TRAILER</button>
+              </div>
+            </div>
+            <h3 class="movie-name">DEADPOOL & WOLVERINE</h3>
+          </div>
+          <div class="movie-card">
+            <div class="poster-wrapper">
+              <span class="age-badge badge-t18">18</span>
+              <img
+                src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2024/06/alien-romulus-film-poster.jpg"
+                alt="Phim"
+                class="movie-poster"
+              />
+              <div class="poster-overlay">
+                <button class="btn-trailer">XEM TRAILER</button>
+              </div>
+            </div>
+            <h3 class="movie-name">ALIEN: ROMULUS</h3>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="chanTrang" id="chanTrang">
+      <div class="khungTrang luoiChanTrang">
+        <div class="cotChanTrang">
+          <img
+            class="anhBieuTuongChanTrang"
+            src="anhBieuTuong.jpg"
+            alt="Logo CineMê"
+          />
+          <p>
+            CineMê mang đến trải nghiệm đặt vé xem phim đơn giản, nhanh chóng và
+            thuận tiện.
+          </p>
+        </div>
+
+        <div class="cotChanTrang">
+          <h3>Chi nhánh Cần Thơ</h3>
+          <ul class="danhSachChanTrang">
+            <li>Chi nhánh Ninh Kiều</li>
+            <li>Chi nhánh Bình Thủy</li>
+            <li>Chi nhánh An Thới</li>
+          </ul>
+        </div>
+
+        <div class="cotChanTrang">
+          <h3>Liên hệ</h3>
+          <ul class="danhSachChanTrang">
+            <li>Điện thoại: 0292 123 4567</li>
+            <li>Email: hotro@cineme.vn</li>
+            <li>Thời gian: 8:00 - 22:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="banQuyen">
+        <p>
+          &copy; <span id="namHienTai"></span> CineMê. Tất cả quyền được bảo
+          lưu.
+        </p>
+      </div>
+    </footer>
+
+    <!-- ================= SCRIPT: NĂM BẢN QUYỀN (dùng chung với header/footer) ================= -->
+    <script>
+      const namHienTai = document.getElementById("namHienTai");
+      if (namHienTai) namHienTai.textContent = new Date().getFullYear();
+    </script>
+
+    <!-- ================= SCRIPT: HERO SLIDER TỰ ĐỘNG ================= -->
+    <script>
+      (function () {
+        const track = document.getElementById("heroSlider__track");
+        const slides = Array.from(track.children);
+        const dotsWrap = document.getElementById("heroDots");
+        const prevBtn = document.getElementById("heroPrev");
+        const nextBtn = document.getElementById("heroNext");
+
+        let current = 0;
+        let autoTimer = null;
+        const AUTO_DELAY = 4000; // 4 giây tự động chuyển, giống CGV/Lotte
+
+        // Tạo chấm điều hướng (dots)
+        slides.forEach((_, i) => {
+          const dot = document.createElement("button");
+          dot.classList.add("heroSlider__dot");
+          dot.setAttribute("aria-label", "Đến slide " + (i + 1));
+          if (i === 0) dot.classList.add("is-active");
+          dot.addEventListener("click", () => goTo(i));
+          dotsWrap.appendChild(dot);
+        });
+        const dots = Array.from(dotsWrap.children);
+
+        function update() {
+          track.style.transform = `translateX(-${current * 100}%)`;
+          dots.forEach((d, i) =>
+            d.classList.toggle("is-active", i === current),
+          );
+        }
+
+        function goTo(index) {
+          current = (index + slides.length) % slides.length;
+          update();
+          restartAuto();
+        }
+
+        function next() {
+          goTo(current + 1);
+        }
+        function prev() {
+          goTo(current - 1);
+        }
+
+        function restartAuto() {
+          clearInterval(autoTimer);
+          autoTimer = setInterval(next, AUTO_DELAY);
+        }
+
+        nextBtn.addEventListener("click", next);
+        prevBtn.addEventListener("click", prev);
+
+        // Dừng tự động chuyển khi rê chuột vào, chạy lại khi rời đi
+        const heroSlider = document.getElementById("heroSlider");
+        heroSlider.addEventListener("mouseenter", () =>
+          clearInterval(autoTimer),
+        );
+        heroSlider.addEventListener("mouseleave", restartAuto);
+
+        // Hỗ trợ vuốt trên điện thoại (touch swipe)
+        let touchStartX = 0;
+        track.addEventListener(
+          "touchstart",
+          (e) => {
+            touchStartX = e.touches[0].clientX;
+          },
+          { passive: true },
+        );
+        track.addEventListener(
+          "touchend",
+          (e) => {
+            const diff = e.changedTouches[0].clientX - touchStartX;
+            if (diff > 50) prev();
+            else if (diff < -50) next();
+          },
+          { passive: true },
+        );
+
+        update();
+        restartAuto();
+      })();
+    </script>
+  </body>
+</html>
